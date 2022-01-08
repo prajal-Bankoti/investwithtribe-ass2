@@ -10,14 +10,14 @@ const SignUp = () => {
   };
   const handleSubmit = (e) => {
     axios
-      .post("http://localhost:4000/post", data)
+      .post("https://investwithtribe.herokuapp.com/post", data)
       .then((res) => setLogin(res.data))
       .catch((err) => console.log("err: ", err));
   };
   return (
     <div>
       {login ? (
-        <div>{login.userName}</div>
+        <div>{login.username}</div>
       ) : (
         <div className="box">
           <label htmlFor="">Username</label>
